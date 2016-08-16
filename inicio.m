@@ -12,4 +12,4 @@ imwrite( imagen, 'I.bmp','bmp' );
 imagen = imread( 'I.bmp','bmp' );
  
 %Aplicando la transformada Wavelet a la imagen
-[ BBn1, ABn1, BAn1, AAn1 ] = transformWavelet( imagen );
+[ BB, AB, BA, AA ] = transformWavelet( imagen );
