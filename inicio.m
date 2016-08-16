@@ -5,8 +5,11 @@
                                     '*.jpg'; '*.bmp';...
                                     '*.gif'; '*.*' }, ...
                                     'Seleccionar Imagen' ); 
-imagenHuesped3 = imread( [ rutaImagen, nombreImagen ] );
-imagenHuesped2 = rgb2ycbcr( imagenHuesped3 );
-imagenHuesped = imagenHuesped2( :, :, 1);
-imwrite( imagenHuesped, 'I.bmp','bmp' );
-imagenHuesped = imread( 'I.bmp','bmp' );
+imagen3 = imread( [ rutaImagen, nombreImagen ] );
+imagen2 = rgb2ycbcr( imagen3 );
+imagen = imagen2( :, :, 1);
+imwrite( imagen, 'I.bmp','bmp' );
+imagen = imread( 'I.bmp','bmp' );
+ 
+%Aplicando la transformada Wavelet a la imagen
+[ BBn1, ABn1, BAn1, AAn1 ] = transformWavelet( imagen );
