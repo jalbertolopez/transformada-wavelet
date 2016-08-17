@@ -17,6 +17,7 @@ imagen = imread( 'I.bmp','bmp' );
 imagenProcesada = transformWaveletInv( BB, AB, BA, AA );
 
 imagenReconstruida = uint8(imagenProcesada);
+imagenColor = ycbcr2rgb( imagenColor );
 
 subplot( 1, 2, 1 ), imshow( imagen );
 subplot( 1, 2, 2 ), imshow( imagenReconstruida );
